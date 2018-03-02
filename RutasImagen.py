@@ -22,7 +22,8 @@ listaArchivos = ['7001-ALA-HER.txt','7002-CUR-BEL.txt','7003-CAR.txt']
 pattern = "([0-9]|0[0-9]|1[0-9]|2[0-3])(:| )([0-5][0-9])"
 
 for x in range (0,len(listaArchivos)):
-    
+
+    contador=0
     for i, line in enumerate(open(listaArchivos[x])):
         if (len(line)>5):
             ######
@@ -43,7 +44,12 @@ for x in range (0,len(listaArchivos)):
             ######
             for match in re.finditer(pattern,line):
                 cadenaRuta = cadenaRuta + match.group() + " -> "
-            if (cadenaRuta != ""):
-                cadenaRuta = "Recorrido: " + cadenaRuta
-                print (cadenaRuta)
-            cadenaRuta=""
+                contador+=1
+            if (cadenaRuta != "" ):
+                if (x==2 and contador<7):
+                    cadenaRuta +=""
+                else:
+                    cadenaRuta = "Recorrido: " + cadenaRuta
+                    print (cadenaRuta)
+                    cadenaRuta=""
+                    contador=0
