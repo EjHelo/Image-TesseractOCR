@@ -20,3 +20,4 @@ Estas librerías de manera predeterminada instalan las librería PIL
 Una vez instaladas las librerías, se procede a ejecutar el archivo .py; Este archivo trae una lista llamada "listaImagenes" en la cual viene la dirección de las imágenes almacenadas en el computador.
 Tomando en cuenta esta condición de la dirección de la imágenes, lo demás es esperar a que el programa lo realice. En este hace la extracción de texto, y según un patrón de diseño lee los archivos .txt generados para que luego muestre los diferentes recorridos de las tres rutas que ofrece el Incofer.
 
+La salida del programa es una impresión en pantalla mostrando el recorrido de las rutas por horas de paradas.
